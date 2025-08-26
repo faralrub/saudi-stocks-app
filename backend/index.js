@@ -3,6 +3,11 @@ const express = require('express');
 const cors = require('cors');
 const yahooFinance = require('yahoo-finance2').default;
 
+const allowedOrigins = [
+  "http://localhost:5173",                       
+  "https://saudi-stocks-frontend.onrender.com"   
+];
+
 const app = express();
 
 // --- Multi-origin CORS (supports localhost + Netlify later) ---
